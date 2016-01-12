@@ -29,5 +29,18 @@ app.get('/calendar', function(req,res){
 	res.render('index');
 });
 
+app.get('/calendar/events', function(req,res){
+	db.collection('events').find({}).toArray(function(err,results){
+		res.json(results);
+	});	
+});
+
+app.get("/calendar/:event",function(req,res){
+	console.log(req.params);
+	db.collection('events').findOne({name: req.params.event},function(err,result){
+		res.json(result);
+	})
+})
+
 
 app.listen(process.env.PORT || 3000);
