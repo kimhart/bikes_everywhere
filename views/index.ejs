@@ -3,14 +3,36 @@
 <head>
 	<title></title>
 	<link rel='stylesheet' href='bower_components/fullcalendar/dist/fullcalendar.css' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 	<script src='bower_components/jquery/dist/jquery.min.js'></script>
 	<script src='bower_components/moment/min/moment.min.js'></script>
 	<script src='bower_components/fullcalendar/dist/fullcalendar.js'></script>
 	<script src='main.js'></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<h1>Calendar</h1>
 	<div id='calendar'></div>
-
+  <div class="modal-container">
+    <button class="close">x</button>
+    <div class="modal">
+    <script id="event-info" type="event-info-template">
+      <h1>{{name}}</h1>
+      <h3>Sponsor: {{sponsor}}</h3>
+      <h3>Description:</h3>
+        <p>{{description}}</p>
+      <h3>Attending:</h3>
+        <p>{{rsvps.length}}</p>
+      <h3>Remaining spots:</h3>
+      <p>{{spots}}</p>
+    </script> 
+    <script id="comments" type="comment-template">
+      <h3>Comments:</h3>
+        <ul>
+          <li>{{name}}: {{comment}}</li>
+        </ul>
+    </script>   
+    </div>
+  </div>
 </body>
 </html>
