@@ -22,6 +22,7 @@
     "body-parser": "^1.14.2",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "handlebars": "^4.0.5",
     "mongo": "^0.1.0",
     "node-mongo-seeds": "^2.2.7"
   }
