@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-	var toggleModal = function(){
-		$('.modal-container').toggle();
-	};
-	$('.close').on('click', toggleModal);
 
 
 
@@ -19,13 +15,17 @@ $(document).ready(function(){
 				response.spots = response.max_attendees - response.rsvps.length;
 				var template = Handlebars.compile(source);
 				var html = template(response);
-				$('.modal').append(html);
+				$('body').append(html);
 				var source2 = $('#comments').html();
 				var template2 = Handlebars.compile(source2);
 				response.comments.forEach(function(comment){
-					$('.modal').append(template2(comment));
+					$('body').append(template2(comment));
 				})
+				var toggleModal = function(){
+					$('.modal-container.'+response._id).toggle();
+				};
 				toggleModal();
+				$('.close').on('click', toggleModal);
 			})
 		}
 	});

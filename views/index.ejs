@@ -13,26 +13,27 @@
 <body>
 	<h1>Calendar</h1>
 	<div id='calendar'></div>
-  <div class="modal-container">
-    <button class="close">x</button>
-    <div class="modal">
-    <script id="event-info" type="event-info-template">
-      <h1>{{name}} </h1>
-      <h3>Sponsor: {{sponsor}}</h3>
-      <h3>Description:</h3>
-        <p>{{description}}</p>
-      <h3>Attending:</h3>
-        <p>{{rsvps.length}}</p>
-      <h3>Remaining spots:</h3>
-      <p>{{spots}}</p>
-    </script> 
-    <script id="comments" type="comment-template">
+  <script id="event-info" type="event-info-template">
+    <div class="modal-container {{_id}}">
+      <button class="close">x</button>
+      <div class="modal">
+        <h1>{{name}} </h1>
+        <h3>Sponsor: {{sponsor}}</h3>
+        <h3>Description:</h3>
+          <p>{{description}}</p>
+        <h3>Attending:</h3>
+          <p>{{rsvps.length}}</p>
+        <h3>Remaining spots:</h3>
+        <p>{{spots}}</p>
+      </div>
+    </div>
+  </script> 
+  <script id="comments" type="comment-template">
       <h3>Comments:</h3>
         <ul>
           <li>{{name}}: {{comment}}</li>
         </ul>
     </script>   
-    </div>
-  </div>
+    
 </body>
 </html>
