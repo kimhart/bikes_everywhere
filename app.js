@@ -26,7 +26,7 @@ app.get('/', function(req,res){
 });
 
 app.get('/calendar', function(req,res){
-	res.render('index');
+	res.render('calendar');
 });
 
 app.get('/calendar/events', function(req,res){
@@ -36,11 +36,22 @@ app.get('/calendar/events', function(req,res){
 });
 
 app.get("/calendar/:event",function(req,res){
-	console.log(req.params);
 	db.collection('events').findOne({name: req.params.event},function(err,result){
 		res.json(result);
 	})
 })
+
+app.post("/calendar/:event/comment", function(req,res){
+	db.collection('events').update({name:req.params.event},{$push:{comments:req.body}},function(err,result){
+		res.json(req.body);
+		})
+	})
+app.post('/calendar/:event/rsvp', function(req,res){
+	db.collection('events').update({name:req.params.event},{$push:{rsvps: req.body}},function(err,result){
+		res.json(req.body);
+	})
+})
+		
 
 
 app.listen(process.env.PORT || 3000);
