@@ -6,7 +6,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  z-index: 1
+  z-index: 1;
+  overflow: scroll;
 }
 
 .modal {
@@ -14,5 +15,5 @@
   margin: 0 auto;
   padding: 60px;
   width: 80%;
-  z-index: 2
+  z-index: 2;
 }
