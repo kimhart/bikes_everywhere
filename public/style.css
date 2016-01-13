@@ -1,13 +1,23 @@
-html {
-  font-family: helvetica;
-}
-
-h1{
+body {
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 100px;
+}
+
 h3 {
-  font-weight: 300;
+  font-weight: 700;
+}
+
+a {
+  color: #1a75ff;
+}
+
+a:hover {
+  color: #0047b3;
 }
 
 .modal-container {
@@ -26,7 +36,79 @@ h3 {
   background-color: white;
   margin: 0 auto;
   padding: 60px;
-  width: 80%;
+  width: 60%;
   z-index: 2
 }
+
+.close{
+  font-size: 20px;
+}
+
+.modal h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.index-container {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  background-image: url('http://3.bp.blogspot.com/-gWkmoDD9zL0/UIPB5OwcbXI/AAAAAAAAOFg/mXmb9gViYRY/s1600/NYC-by-Bicycle-2.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-text {
+  padding-top: 100px;
+  color: white;
+  display: flex;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+footer ul {
+  width: 45%;
+  margin: 0 auto;
+  display: block;
+}
+
+footer li {
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.calendar-div {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
 

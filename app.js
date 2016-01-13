@@ -22,7 +22,7 @@ MongoClient.connect(mongoUrl, function(err, database){
 });
 
 app.get('/', function(req,res){
-	res.send("Hello World")
+	res.render('index');
 });
 
 app.get('/calendar', function(req,res){
