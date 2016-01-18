@@ -6,7 +6,7 @@ var mongoUrl = 'mongodb://localhost:27017/bikeEvents';
 var ObjectId = require('mongodb').ObjectId;
 
 var db;
-
+ 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
